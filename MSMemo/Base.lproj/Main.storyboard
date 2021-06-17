@@ -73,7 +73,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bib-fD-dJI">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Item" id="aAc-7n-4er"/>
+                                    <barButtonItem systemItem="compose" id="aAc-7n-4er">
+                                        <connections>
+                                            <segue destination="965-4L-Mp7" kind="presentation" id="8mj-SM-nEN"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HXi-Cg-ODJ">
@@ -133,6 +137,9 @@
                         <viewLayoutGuide key="safeArea" id="RRW-Pz-haH"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="aB8-sb-A17"/>
+                    <connections>
+                        <outlet property="memoTableView" destination="HXi-Cg-ODJ" id="glk-nE-Ded"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1D-8c-JIx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -219,4 +226,7 @@
             <point key="canvasLocation" x="1169.5652173913045" y="-474.10714285714283"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8mj-SM-nEN"/>
+    </inferredMetricsTieBreakers>
 </document>
